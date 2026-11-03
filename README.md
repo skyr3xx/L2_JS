@@ -223,3 +223,23 @@ function isCircleSorted( arr ){
 // 
 
 // z15
+function howManyTimes(time1,time2){
+  //coding here...
+  let datetime1 = new Date(time1);
+  let datetime2 = new Date(time2);
+  let count = 0;
+  while(datetime1 < datetime2)
+  {
+    let h = datetime1.getHours();
+    let m = datetime1.getMinutes();
+    let s = datetime1.getSeconds();
+    let h12 = h%12 === 0 ? 12 : h%12;
+    if(m === 30 && s === 0)  count+=1
+    else if(m === 0 && s < h12) count+=1
+    datetime1.setSeconds(datetime1.getSeconds() + 1);
+  }
+  return count;
+}
+//
+
+// z16
