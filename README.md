@@ -242,4 +242,10 @@ function howManyTimes(time1,time2){
 }
 //
 
-// z16
+// z18
+function createPhoneNumber(numbers){
+  let f = numbers.slice(0, 3).join("");
+  let s = numbers.slice(3, 6).join("");
+  let t = numbers.slice(6, 10).join("");
+  return `(${f}) ${s}-${t}`;
+}
